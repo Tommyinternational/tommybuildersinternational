@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tommy Builders International — Building Trust, Creating Landmarks. Construction, renovation, masonry and project support.">
+  <meta name="theme-color" content="#111111">
+  <title>Tommy Builders International | Building Trust, Creating Landmarks</title>
+  <style>
+    :root{--orange:#f47712;--orange2:#ff941f;--ink:#111;--muted:#62666b;--paper:#f7f7f5;--white:#fff;--line:#e7e7e4}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    a{color:inherit;text-decoration:none} button,input,textarea,select{font:inherit}
+    .topbar{background:#111;color:#fff;padding:9px 5.5%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.86rem}
+    .topbar a:hover{color:#ffad62}.brandbar{display:flex;align-items:center;justify-content:space-between;padding:18px 5.5%;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px}.logo{width:58px;height:58px;display:grid;place-items:center;background:var(--orange);clip-path:polygon(50% 0,100% 35%,100% 100%,0 100%,0 35%);color:#111;font-size:1.65rem;font-weight:900}
+    .brand-name{font-weight:900;line-height:1.02;font-size:clamp(1.05rem,2vw,1.55rem);letter-spacing:.02em}.brand-name span{display:block;color:var(--orange)}
+    .tagline{font-style:italic;color:#555;font-size:.84rem;margin-top:5px}
+    .brand-cta{background:var(--orange);color:#111;padding:12px 19px;border-radius:3px;font-weight:800;white-space:nowrap}
+    nav{background:#111;color:#fff;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;min-height:58px}
+    .navlinks{display:flex;gap:clamp(14px,3vw,34px);align-items:center}.navlinks a{font-size:.91rem;font-weight:700;padding:18px 0}.navlinks a:hover,.navlinks a.active{color:#ff9a3c}
+    .menu-btn{display:none;background:none;border:1px solid #555;color:#fff;padding:8px 12px;border-radius:3px}
+    .hero{position:relative;overflow:hidden;min-height:560px;background:linear-gradient(110deg,rgba(8,12,15,.94),rgba(8,12,15,.78) 50%,rgba(8,12,15,.28)),linear-gradient(135deg,#27343b,#6d7777 55%,#d4d1c7);color:#fff;display:flex;align-items:center;padding:80px 8%}
+    .hero:before{content:"";position:absolute;right:3%;bottom:-4%;width:48%;height:80%;opacity:.38;background:linear-gradient(145deg,transparent 0 25%,#f5f5f0 25% 26%,transparent 26%),linear-gradient(90deg,transparent 0 8%,#111 8% 11%,transparent 11% 20%,#111 20% 23%,transparent 23% 32%,#111 32% 35%,transparent 35%),linear-gradient(0deg,#111 0 9%,transparent 9%);clip-path:polygon(0 100%,0 43%,15% 43%,15% 24%,30% 24%,30% 0,52% 0,52% 35%,70% 35%,70% 12%,100% 12%,100% 100%);border-top:8px solid var(--orange)}
+    .hero:after{content:"";position:absolute;right:11%;top:0;width:2px;height:70%;background:#f47712;box-shadow:0 0 0 1px #f47712}
+    .hero-content{position:relative;z-index:1;max-width:720px}.eyebrow{color:#ff9a3c;text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:.8rem}
+    h1{font-size:clamp(2.6rem,6vw,5.1rem);line-height:1.02;letter-spacing:-.04em;margin:16px 0 20px;max-width:780px}h1 span{color:#ff8b20}
+    .hero p{font-size:1.12rem;color:#e4e6e6;max-width:570px;margin-bottom:30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border:2px solid var(--orange);background:var(--orange);color:#111;font-weight:850;border-radius:3px;transition:.2s}.btn:hover{transform:translateY(-2px);background:#ff9a3c}.btn-outline{background:transparent;color:#fff;border-color:#fff}.btn-outline:hover{background:#fff;color:#111}
+    .truststrip{display:grid;grid-template-columns:repeat(3,1fr);background:#181818;color:#fff;padding:22px 7%;gap:20px}.trustitem{display:flex;align-items:center;gap:13px;justify-content:center;border-right:1px solid #454545}.trustitem:last-child{border:0}.trusticon{color:var(--orange);font-size:1.5rem}.trustitem strong{display:block;font-size:.95rem}.trustitem small{color:#bcbcbc}
+    section{padding:82px 7%}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}.section-head .eyebrow{color:var(--orange)}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:10px 0 14px;letter-spacing:-.03em}.section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-panel{background:var(--paper);padding:42px;border-left:5px solid var(--orange)}.about-panel h2{margin-top:0}.about-panel p{color:#555}
+    .points{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}.point{font-weight:750;display:flex;gap:10px;align-items:center}.tick{color:var(--orange);font-size:1.2rem;font-weight:900}
+    .about-visual{min-height:360px;background:linear-gradient(145deg,rgba(0,0,0,.08),rgba(0,0,0,.55)),linear-gradient(130deg,#c7c8c3,#747c7c 52%,#242c30);position:relative;overflow:hidden;display:flex;align-items:end;padding:28px;color:#fff}
+    .about-visual:before{content:"";position:absolute;inset:14% 10% 0 18%;border:8px solid rgba(255,255,255,.65);border-bottom:0;transform:skewY(-5deg);box-shadow:inset 0 0 0 12px rgba(0,0,0,.12)}
+    .about-visual:after{content:"";position:absolute;left:0;right:0;bottom:0;height:23%;background:repeating-linear-gradient(90deg,#202629 0 5px,transparent 5px 80px),#343a3b}
+    .visual-label{position:relative;z-index:2;font-size:1.5rem;font-weight:900;max-width:300px}
+    .services{background:var(--paper)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.service{background:#fff;padding:28px 22px;border:1px solid var(--line);min-height:205px;transition:.2s}.service:hover{border-color:var(--orange);transform:translateY(-4px);box-shadow:0 12px 28px #0000000b}.service-icon{font-size:2rem;color:var(--orange)}.service h3{margin:13px 0 7px;font-size:1.12rem}.service p{margin:0;color:var(--muted);font-size:.93rem}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);background:#fff}.project-art{height:190px;background:linear-gradient(145deg,#d4d5d1,#8b9694 55%,#343c3d);position:relative;overflow:hidden}.project-art:before{content:"";position:absolute;left:17%;right:17%;bottom:0;height:78%;border:7px solid #e9e9e3;border-bottom:0;background:repeating-linear-gradient(90deg,transparent 0 48px,#e9e9e3 48px 55px),repeating-linear-gradient(0deg,transparent 0 45px,#e9e9e3 45px 52px);box-shadow:0 0 0 100px #0000000a}.project-art.two{background:linear-gradient(140deg,#b9c4c3,#606f70 55%,#252d30)}.project-art.three{background:linear-gradient(140deg,#d6d1c6,#8d9690 55%,#41494a)}.project-info{padding:20px}.project-info h3{margin:0 0 6px}.project-info p{color:var(--muted);font-size:.9rem;margin:0}.notice{margin:22px auto 0;max-width:800px;padding:13px 17px;background:#fff7ed;border-left:4px solid var(--orange);color:#5c4b3c;font-size:.9rem}
+    .quote{background:#171717;color:#fff}.quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.quote-copy p{color:#c7c7c7}.contact-line{margin-top:22px;color:#eee}.contact-line a{color:#ff9a3c}.form{background:#fff;color:#111;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-weight:750;font-size:.88rem}.field input,.field textarea,.field select{width:100%;border:1px solid #d8d8d8;padding:12px 13px;background:#fff;border-radius:2px}.field textarea{min-height:120px;resize:vertical}.form button{grid-column:1/-1;cursor:pointer}.form-note{grid-column:1/-1;color:#666;font-size:.8rem;margin:0}
+    footer{background:#0c0c0c;color:#eee;padding:32px 7% 20px}.footer-top{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;align-items:center}.footer-brand{font-weight:900;font-size:1.2rem}.footer-brand span{color:var(--orange)}.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem}.footer-links a:hover{color:var(--orange)}.copyright{border-top:1px solid #333;margin-top:25px;padding-top:18px;color:#999;font-size:.82rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .float-wa{position:fixed;right:20px;bottom:20px;background:#1eaa59;color:#fff;border-radius:50px;padding:13px 18px;font-weight:800;box-shadow:0 8px 25px #0003;z-index:20}
+    @media(max-width:900px){.service-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.quote-grid{grid-template-columns:1fr;gap:30px}.projects-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:650px){.topbar{justify-content:center;text-align:center}.brandbar{padding:14px 5%;}.brand-cta{display:none}.logo{width:48px;height:48px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#111;padding:10px 6%;z-index:30;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}nav{position:relative;min-height:55px}.navlinks a{padding:12px 0;border-bottom:1px solid #333}.hero{min-height:530px;padding:70px 7%}.hero:before{width:70%;opacity:.2}.truststrip{grid-template-columns:1fr;padding:20px 8%;gap:12px}.trustitem{justify-content:flex-start;border-right:0;border-bottom:1px solid #454545;padding-bottom:12px}.trustitem:last-child{border:0;padding:0}section{padding:62px 6%}.about-panel{padding:28px 23px}.points{grid-template-columns:1fr}.service-grid,.projects-grid{grid-template-columns:1fr}.form{grid-template-columns:1fr;padding:22px}.field.full,.form button,.form-note{grid-column:auto}.float-wa{right:12px;bottom:12px;padding:11px 14px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>Construction services for clients in Nigeria and beyond</span>
+    <span><a href="tel:+2349116780035">09116780035</a> &nbsp;|&nbsp; <a href="tel:+2349167099643">09167099643</a></span>
+  </div>
+  <header class="brandbar">
+    <a class="brand" href="#home" aria-label="Tommy Builders International home">
+      <div class="logo">TBI</div>
+      <div><div class="brand-name">TOMMY BUILDERS <span>INTERNATIONAL</span></div><div class="tagline">Building Trust, Creating Landmarks.</div></div>
+    </a>
+    <a class="brand-cta" href="#quote">REQUEST A QUOTE ↗</a>
+  </header>
+  <nav aria-label="Main navigation">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+    <div class="navlinks" id="navlinks">
+      <a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#projects">Projects</a><a href="#quote">Request a Quote</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Construction • Building • Project Support</div>
+        <h1>Building Trust,<br><span>Creating Landmarks.</span></h1>
+        <p>Thoughtful construction solutions, practical workmanship and a commitment to quality at every stage of your project.</p>
+        <div class="actions"><a class="btn" href="#services">Explore Our Services →</a><a class="btn btn-outline" href="#quote">Discuss Your Project ↗</a></div>
+      </div>
+    </section>
+
+    <div class="truststrip">
+      <div class="trustitem"><span class="trusticon">◆</span><div><strong>Quality-minded work</strong><small>Care at every project stage</small></div></div>
+      <div class="trustitem"><span class="trusticon">◈</span><div><strong>Clear communication</strong><small>Know what your project needs</small></div></div>
+      <div class="trustitem"><span class="trusticon">⌂</span><div><strong>Project-focused service</strong><small>Solutions shaped around your brief</small></div></div>
+    </div>
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-panel">
+          <div class="eyebrow">Who we are</div>
+          <h2>Building with purpose. Delivering with care.</h2>
+          <p>Tommy Builders International is a construction brand focused on helping clients plan and deliver building projects with care, clear communication and attention to detail.</p>
+          <p>Whether you are considering a new build, renovation or a specific construction task, tell us what you have in mind and we can discuss the next steps.</p>
+          <div class="points"><div class="point"><span class="tick">✓</span> Client-focused approach</div><div class="point"><span class="tick">✓</span> Practical solutions</div><div class="point"><span class="tick">✓</span> Clear project discussions</div><div class="point"><span class="tick">✓</span> Quality-conscious delivery</div></div>
+        </div>
+        <div class="about-visual"><div class="visual-label">Strong foundations.<br>Lasting value.</div></div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Our Construction Services</h2><p>Explore the areas of work you can contact us about. Scope and availability are confirmed after discussing your project.</p></div>
+      <div class="service-grid">
+        <article class="service"><div class="service-icon">⌂</div><h3>Building Construction</h3><p>New building projects and construction work planned around your requirements.</p></article>
+        <article class="service"><div class="service-icon">▦</div><h3>Civil Works</h3><p>General civil construction and infrastructure-related project enquiries.</p></article>
+        <article class="service"><div class="service-icon">⚒</div><h3>Renovation & Remodelling</h3><p>Improvements, alterations and upgrades to existing spaces.</p></article>
+        <article class="service"><div class="service-icon">▤</div><h3>Masonry & Plastering</h3><p>Blockwork, masonry, rendering and plastering work.</p></article>
+        <article class="service"><div class="service-icon">⌁</div><h3>Roofing Solutions</h3><p>Roof construction, repairs and related building work enquiries.</p></article>
+        <article class="service"><div class="service-icon">▥</div><h3>Foundation Works</h3><p>Foundation-related construction, subject to site and technical assessment.</p></article>
+        <article class="service"><div class="service-icon">▧</div><h3>Project Coordination</h3><p>Discuss planning, work stages, materials and project coordination needs.</p></article>
+        <article class="service"><div class="service-icon">＋</div><h3>General Building Works</h3><p>Tell us about your construction needs and we'll discuss a suitable scope.</p></article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head"><div class="eyebrow">Our portfolio</div><h2>Projects & Work Gallery</h2><p>A project gallery will be added as verified company project photographs and details become available.</p></div>
+      <div class="projects-grid">
+        <article class="project"><div class="project-art"></div><div class="project-info"><h3>Building Construction</h3><p>Project photographs coming soon.</p></div></article>
+        <article class="project"><div class="project-art two"></div><div class="project-info"><h3>Structural & Civil Works</h3><p>Project photographs coming soon.</p></div></article>
+        <article class="project"><div class="project-art three"></div><div class="project-info"><h3>Renovation & Finishing</h3><p>Project photographs coming soon.</p></div></article>
+      </div>
+      <div class="notice"><strong>Portfolio note:</strong> These are illustrative placeholders, not claims of completed projects. They can be replaced with your real project photos, locations and descriptions.</div>
+    </section>
+
+    <section class="quote" id="quote">
+      <div class="quote-grid">
+        <div class="quote-copy">
+          <div class="eyebrow">Start a conversation</div><h2>Tell us about your project.</h2>
+          <p>Share a few details about the work you have in mind. Your email app will open with the enquiry prepared for you to review and send.</p>
+          <div class="contact-line"><strong>Call:</strong><br><a href="tel:+2349116780035">09116780035</a><br><a href="tel:+2349167099643">09167099643</a></div>
+          <div class="contact-line"><strong>Email:</strong><br><a href="mailto:Tmwadebowale@gmail.com">Tmwadebowale@gmail.com</a></div>
+        </div>
+        <form class="form" id="quoteForm">
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Full name"></div>
+          <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required type="tel" placeholder="Your phone number"></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="service">Service required</label><select id="service" name="service"><option>Building construction</option><option>Civil works</option><option>Renovation / remodelling</option><option>Masonry / plastering</option><option>Roofing</option><option>Foundation works</option><option>Other</option></select></div>
+          <div class="field full"><label for="location">Project location</label><input id="location" name="location" placeholder="Town / city and state"></div>
+          <div class="field full"><label for="details">Project details *</label><textarea id="details" name="details" required placeholder="Briefly describe the work you need..."></textarea></div>
+          <button class="btn" type="submit">Prepare Enquiry Email →</button>
+          <p class="form-note">This form prepares an email on your device; it does not submit data to a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-top">
+      <div><div class="footer-brand">TOMMY BUILDERS <span>INTERNATIONAL</span></div><div class="tagline">Building Trust, Creating Landmarks.</div></div>
+      <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#quote">Get a Quote</a></div>
+      <div><strong>Contact</strong><br><a href="tel:+2349116780035">09116780035</a> · <a href="https://wa.me/2349116780035" target="_blank" rel="noopener">WhatsApp 1</a><br><a href="tel:+2349167099643">09167099643</a> · <a href="https://wa.me/2349167099643" target="_blank" rel="noopener">WhatsApp 2</a><br><a href="mailto:Tmwadebowale@gmail.com">Tmwadebowale@gmail.com</a></div>
+    </div>
+    <div class="copyright"><span>© <span id="year"></span> Tommy Builders International. All rights reserved.</span><span>Serving project enquiries in Nigeria and internationally.</span></div>
+  </footer>
+  <a class="float-wa" href="https://wa.me/2349116780035" target="_blank" rel="noopener" aria-label="Chat with Tommy Builders International on WhatsApp">WhatsApp ↗</a>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navlinks=document.getElementById('navlinks');
+    menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('quoteForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const d=new FormData(this);
+      const body=[
+        'Construction project enquiry for Tommy Builders International','',
+        'Name: '+d.get('name'),'Phone: '+d.get('phone'),'Email: '+(d.get('email')||'Not provided'),
+        'Service: '+d.get('service'),'Project location: '+(d.get('location')||'Not provided'),'',
+        'Project details:',d.get('details')
+      ].join('\n');
+      const subject=encodeURIComponent('Construction Project Enquiry - '+d.get('name'));
+      window.location.href='mailto:Tmwadebowale@gmail.com?subject='+subject+'&body='+encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
